@@ -14,12 +14,13 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.SimpleFormController;
 
 public class Login extends SimpleFormController {
-	private Logger logger = Logger.getLogger(this.getClass().getName());  
-    
-	public ModelAndView onSubmit(Object command, BindException errors) throws Exception { 
-         User user = (User)command;
-         Map model = errors.getModel(); 
-	     model.put("user", user); 
-         return new ModelAndView(getSuccessView(), model); 
-    } 
+	private Logger logger = Logger.getLogger(this.getClass().getName());
+
+	public ModelAndView onSubmit(Object command, BindException errors)
+			throws Exception {
+		User user = (User) command;
+		Map model = errors.getModel();
+		model.put("user", user);
+		return new ModelAndView(getSuccessView(), model);
+	}
 }
