@@ -16,8 +16,7 @@ import org.springframework.web.servlet.mvc.SimpleFormController;
 public class Login extends SimpleFormController {
 	private Logger logger = Logger.getLogger(this.getClass().getName());
 
-	public ModelAndView onSubmit(Object command, BindException errors)
-			throws Exception {
+	public ModelAndView onSubmit(Object command, BindException errors) throws Exception {
 		User user = (User) command;
 		Map model = errors.getModel();
 		model.put("user", user);
